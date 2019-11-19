@@ -14,13 +14,55 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4nw-RZ-wLd">
+                                <rect key="frame" x="20" y="44" width="374" height="466"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dhE-ZX-sCr">
+                                <rect key="frame" x="84" y="565" width="46" height="30"/>
+                                <state key="normal" title="カメラ"/>
+                                <connections>
+                                    <action selector="runCamera:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dwa-1c-GeD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YmE-uW-cRD">
+                                <rect key="frame" x="192" y="710" width="31" height="30"/>
+                                <state key="normal" title="保存"/>
+                                <connections>
+                                    <action selector="savePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="14B-Ne-vct"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NnA-Lb-Fnq">
+                                <rect key="frame" x="281" y="565" width="62" height="30"/>
+                                <state key="normal" title="アルバム"/>
+                                <connections>
+                                    <action selector="showAlbum:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7m7-Fg-hZP"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="4nw-RZ-wLd" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="1aF-cy-N2u"/>
+                            <constraint firstItem="YmE-uW-cRD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="192" id="5gu-g6-Z4e"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dhE-ZX-sCr" secondAttribute="bottom" constant="267" id="BPb-s6-7Iz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="YmE-uW-cRD" secondAttribute="bottom" constant="122" id="MR2-bd-FK3"/>
+                            <constraint firstItem="4nw-RZ-wLd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="VyD-5K-h7Z"/>
+                            <constraint firstItem="4nw-RZ-wLd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="eoO-Mj-oOB"/>
+                            <constraint firstItem="dhE-ZX-sCr" firstAttribute="baseline" secondItem="NnA-Lb-Fnq" secondAttribute="baseline" id="g6a-EZ-N7Z"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NnA-Lb-Fnq" secondAttribute="trailing" constant="71" id="geg-z9-GxA"/>
+                            <constraint firstItem="dhE-ZX-sCr" firstAttribute="top" secondItem="4nw-RZ-wLd" secondAttribute="bottom" constant="55" id="iUl-Ao-waL"/>
+                            <constraint firstItem="4nw-RZ-wLd" firstAttribute="centerX" secondItem="YmE-uW-cRD" secondAttribute="centerX" id="tXV-em-vv4"/>
+                            <constraint firstItem="dhE-ZX-sCr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="84" id="uR6-b8-CHm"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="4nw-RZ-wLd" id="1rq-rj-hLI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-57" y="127"/>
+            <point key="canvasLocation" x="-57.971014492753625" y="126.5625"/>
         </scene>
     </scenes>
 </document>
